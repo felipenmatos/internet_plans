@@ -12,10 +12,9 @@ import Modal from "../../components/Modal/Modal";
 function Home() {
   const navigate = useNavigate();
   const { userContext } = useHook();
-  const { dataList, setDataList } = userContext;
+  const { setDataList } = userContext;
   const [cep, setCep] = useState("");
   const [error, setError] = useState(false);
-  console.log(dataList);
 
   function consult() {
     if (cep.length < 8) {
