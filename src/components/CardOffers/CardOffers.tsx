@@ -52,14 +52,29 @@ const Header = styled.div`
   border-radius: 20px 20px 0px 0px;
 `;
 
-const Location = styled.p``;
+const Location = styled.p`
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #060462;
+`;
 
 const Ul = styled.ul`
   margin-top: 40px;
-  margin-left: -50%;
 `;
 
-const Li = styled.li``;
+const Li = styled.li`
+  margin-top: 9px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  color: #ffffff;
+`;
 
 const Button = styled.button`
   width: 122px;
