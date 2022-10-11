@@ -9,7 +9,7 @@ function App() {
   return (
     <Container>
       <Header src={logo} alt="logo" text="Sair" />
-      <Footer />
+      <Footer contato="(00) 0000 - 0000" email="challenge@internet.com" />
     </Container>
   );
 }
