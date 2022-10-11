@@ -6,12 +6,16 @@ import FormCep from "../../components/FormCep/FormCep";
 import Header from "../../components/Header/Header";
 import TitleHome from "../../components/TitleHome/TitleHome";
 import { useNavigate } from "react-router-dom";
+import { useHook } from "../../context/state";
 import Modal from "../../components/Modal/Modal";
 
 function Home() {
   const navigate = useNavigate();
-  const [cep, setCep]: any = useState("");
-  const [error, setError]: any = useState(false);
+  const { userContext } = useHook();
+  const { dataList, setDataList } = userContext;
+  const [cep, setCep] = useState("");
+  const [error, setError] = useState(false);
+  console.log(dataList);
 
   function consult() {
     if (cep.length < 8) {
@@ -22,8 +26,8 @@ function Home() {
       fetch(`https://viacep.com.br/ws/${formatCep}/json/`)
         .then((res) => {
           res.json().then(function (data) {
-            console.log(data);
             navigate("/Offers");
+            setDataList(data);
           });
         })
         .catch((error) => {
@@ -39,11 +43,6 @@ function Home() {
 
   console.log(cep);
 
-  const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const cepValue = event.target.value;
-    setCep(cepValue);
-  };
-
   return (
     <Container>
       <Header src={logo} alt="logo" text="Sair" />
@@ -55,7 +54,7 @@ function Home() {
             button="Consultar"
             onClick={() => consult()}
             value={cep}
-            onChange={inputHandler}
+            onChange={(e) => setCep(e.target.value)}
           />
         </Div>
         <Div>

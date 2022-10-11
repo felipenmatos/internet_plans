@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import logo from "../../assets/Logo.svg";
 import CardOffers from "../../components/CardOffers/CardOffers";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import { useNavigate } from "react-router-dom";
+import { useHook } from "../../context/state";
+import ModalOffers from "../../components/ModalOffers/ModalOffers";
 
 function Offers() {
+  const { userContext } = useHook();
+  const { dataList } = userContext;
+  const [modal, setModal] = useState(false);
   const navigate = useNavigate();
 
   function Click() {
@@ -19,30 +24,40 @@ function Offers() {
       <Body>
         <Row>
           <CardOffers
-            location="Location"
+            location={dataList.localidade}
             description1="03 CI Protege (antivírus)"
             description2=" TV – Streaming com canais"
             description3="500 Mega"
             button="Contratar"
+            onClick={() => setModal(true)}
           />
           <CardOffers
-            location="Location"
+            location={dataList.localidade}
             description1="01 CI Protege (antivírus)"
             description2="Deezer"
             description3="300 Mega"
             button="Contratar"
+            onClick={() => setModal(true)}
           />
           <CardOffers
-            location="Location"
+            location={dataList.localidade}
             description1="03 CI Protege (antivírus)"
             description2="TV – Streaming com canais"
             description3="200 Mega"
             button="Contratar"
+            onClick={() => setModal(true)}
           />
         </Row>
         <Button onClick={() => Click()}>Ops, errei meu cep!</Button>
       </Body>
       <Footer contato="(00) 0000 - 0000" email="challenge@internet.com" />
+      {modal && (
+        <ModalOffers
+          title={`Informe seu e-mail para entrarmos em contato com uma unidade mais próxima da cidade ${dataList.localidade} , bairro ${dataList.bairro}.`}
+          onClick={() => setModal(false)}
+          button="Enviar"
+        />
+      )}
     </Container>
   );
 }

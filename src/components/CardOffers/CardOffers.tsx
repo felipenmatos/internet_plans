@@ -7,6 +7,7 @@ type TypeCard = {
   description2: string;
   description3: string;
   button: string;
+  onClick: () => void;
 };
 
 function CardOffers({
@@ -15,6 +16,7 @@ function CardOffers({
   description2,
   description3,
   button,
+  onClick,
 }: TypeCard) {
   return (
     <Container>
@@ -26,7 +28,7 @@ function CardOffers({
         <Li>{description2}</Li>
         <Li>{description3}</Li>
       </Ul>
-      <Button>{button}</Button>
+      <Button onClick={onClick}>{button}</Button>
     </Container>
   );
 }
