@@ -4,8 +4,15 @@ import logo from "../../assets/Logo.svg";
 import CardOffers from "../../components/CardOffers/CardOffers";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
+import { useNavigate } from "react-router-dom";
 
 function Offers() {
+  const navigate = useNavigate();
+
+  function Click() {
+    navigate("/");
+  }
+
   return (
     <Container>
       <Header src={logo} alt="logo" text="Sair" />
@@ -33,7 +40,7 @@ function Offers() {
             button="Contratar"
           />
         </Row>
-        <Button>Ops, errei meu cep!</Button>
+        <Button onClick={() => Click()}>Ops, errei meu cep!</Button>
       </Body>
       <Footer contato="(00) 0000 - 0000" email="challenge@internet.com" />
     </Container>

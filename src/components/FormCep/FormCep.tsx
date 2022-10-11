@@ -5,14 +5,29 @@ type TypeForm = {
   title: string;
   placeholder: string;
   button: string;
+  onClick: () => void;
+  value: string;
+  onChange: any;
 };
 
-function FormCep({ title, placeholder, button }: TypeForm) {
+function FormCep({
+  title,
+  placeholder,
+  button,
+  onClick,
+  value,
+  onChange,
+}: TypeForm) {
   return (
     <Container>
       <Title>{title}</Title>
-      <Input placeholder={placeholder} type="text" />
-      <Button>{button}</Button>
+      <Input
+        value={value}
+        onChange={onChange}
+        placeholder={placeholder}
+        type="text"
+      />
+      <Button onClick={onClick}>{button}</Button>
     </Container>
   );
 }
