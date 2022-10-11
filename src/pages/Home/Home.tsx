@@ -1,13 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import background from "./assets/Background.jpg";
-import logo from "./assets/Logo.svg";
-import Footer from "./components/Footer/Footer";
-import FormCep from "./components/FormCep/FormCep";
-import Header from "./components/Header/Header";
-import TitleHome from "./components/TitleHome/TitleHome";
+import logo from "../../assets/Logo.svg";
+import Footer from "../../components/Footer/Footer";
+import FormCep from "../../components/FormCep/FormCep";
+import Header from "../../components/Header/Header";
+import TitleHome from "../../components/TitleHome/TitleHome";
 
-function App() {
+function Home() {
   return (
     <Container>
       <Header src={logo} alt="logo" text="Sair" />
@@ -38,9 +37,6 @@ const Container = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background: url(${background});
-  background-size: 100%;
-  background-repeat: no-repeat;
 `;
 
 const Body = styled.div`
@@ -59,4 +55,4 @@ const Div = styled.div`
   align-items: center;
 `;
 
-export default App;
+export default Home;
