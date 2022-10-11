@@ -16,6 +16,7 @@ function Offers() {
 
   function Click() {
     navigate("/");
+    localStorage.removeItem("user");
   }
 
   return (

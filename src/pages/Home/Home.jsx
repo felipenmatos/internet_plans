@@ -27,6 +27,7 @@ function Home() {
           res.json().then(function (data) {
             navigate("/Offers");
             setDataList(data);
+            localStorage.setItem("user","current_user");
           });
         })
         .catch((error) => {
