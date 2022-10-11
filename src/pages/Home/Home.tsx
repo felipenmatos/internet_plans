@@ -17,7 +17,19 @@ function Home() {
     if (cep.length < 8) {
       setError(true);
     } else {
-      navigate("/Offers");
+      const formatCep = cep.replace(/[^\d]/g, "");
+      console.log(formatCep);
+      fetch(`https://viacep.com.br/ws/${formatCep}/json/`)
+        .then((res) => {
+          res.json().then(function (data) {
+            console.log(data);
+            navigate("/Offers");
+          });
+        })
+        .catch((error) => {
+          console.log(error);
+          setError(true);
+        });
     }
   }
 

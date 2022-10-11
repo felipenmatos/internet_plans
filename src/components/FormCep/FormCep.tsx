@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { cepMask } from "../../utils/Mask.js";
 
 type TypeForm = {
   title: string;
@@ -22,7 +23,7 @@ function FormCep({
     <Container>
       <Title>{title}</Title>
       <Input
-        value={value}
+        value={cepMask(String(value))}
         onChange={onChange}
         placeholder={placeholder}
         type="text"
