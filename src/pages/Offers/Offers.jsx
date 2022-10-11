@@ -85,6 +85,14 @@ const Row = styled.div`
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 40px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 190px);
+    grid-gap: 10px;
+  }
 `;
 
 const Button = styled.button`
@@ -102,6 +110,23 @@ const Button = styled.button`
   border-radius: 10px;
   border: none;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 183px;
+    height: 37px;
+    margin-bottom: -30px;
+    margin-left: 43%;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+    background: #00cefc;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
 `;
 
 export default Offers;

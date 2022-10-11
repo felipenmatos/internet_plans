@@ -4,6 +4,6 @@ import Home from "./Home";
 
 test("renders learn react link", () => {
   render(<Home />);
-  const linkElement = screen.getByText(/learn react/i);
+  const linkElement = screen.getAllByAltText(/logo/i);
   expect(linkElement).toBeInTheDocument();
 });

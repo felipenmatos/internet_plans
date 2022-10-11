@@ -52,8 +52,8 @@ const Card = styled.div`
   align-items: center;
 
   @media (max-width: 768px) {
-    width: 250px;
-    height: 250px;
+    width: 320px;
+    height: 340px;
     border-radius: 10px;
     background-color: #ffffff;
     display: flex;
@@ -72,6 +72,7 @@ const Title = styled.h1`
   color: #e90000;
 
   @media (max-width: 768px) {
+    width: 90%;
     font-family: "Inter";
     font-style: normal;
     font-weight: 700;

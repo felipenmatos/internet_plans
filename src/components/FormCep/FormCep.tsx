@@ -42,6 +42,17 @@ const Container = styled.div`
   background: rgba(0, 206, 252, 0.3);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 321px;
+    height: 270px;
+    background: rgba(0, 206, 252, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+  }
 `;
 
 const Title = styled.p`
@@ -52,6 +63,16 @@ const Title = styled.p`
   font-size: 24px;
   line-height: 29px;
   color: #ffffff;
+
+  @media (max-width: 768px) {
+    margin-top: 29px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #ffffff;
+  }
 `;
 
 const Input = styled.input`

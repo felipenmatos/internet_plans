@@ -21,6 +21,11 @@ const Container = styled.div`
   width: 432px;
   display: flex;
   flex-direction: column;
+  @media (max-width: 768px) {
+    width: 432px;
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const Title = styled.h1`
@@ -31,6 +36,17 @@ const Title = styled.h1`
   line-height: 48px;
   color: #ffffff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @media (max-width: 768px) {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+      0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
 `;
 
 const Description = styled.p`
@@ -42,6 +58,18 @@ const Description = styled.p`
   line-height: 29px;
   color: #ffffff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @media (max-width: 768px) {
+    margin-top: 15px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+      0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
 `;
 
 const Button = styled.button`
@@ -59,6 +87,10 @@ const Button = styled.button`
   border-radius: 10px;
   border: none;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    margin-top: 15px;
+  }
 `;
 
 export default TitleHome;
