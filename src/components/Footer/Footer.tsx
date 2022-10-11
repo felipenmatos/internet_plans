@@ -22,7 +22,7 @@ function Footer({ contato, email }: TypeFooter) {
 
 const Container = styled.div`
   width: 100%;
-  height: 60px;
+  height: 9vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
