@@ -44,6 +44,11 @@ const Button = styled.button`
   background: #ffffff;
   border: 1px solid #00cefc;
   cursor: pointer;
+
+  :hover {
+    color: #ffffff;
+    background: #00cefc;
+  }
 `;
 
 export default Header;

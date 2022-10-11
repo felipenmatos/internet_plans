@@ -5,6 +5,7 @@ import logo from "./assets/Logo.svg";
 import Footer from "./components/Footer/Footer";
 import FormCep from "./components/FormCep/FormCep";
 import Header from "./components/Header/Header";
+import TitleHome from "./components/TitleHome/TitleHome";
 
 function App() {
   return (
@@ -19,10 +20,11 @@ function App() {
           />
         </Div>
         <Div>
-          <FormCep
-            title="Informe seu CEP"
-            placeholder="Digite seu Cep..."
-            button="Consultar"
+          <TitleHome
+            title="Sua conectividade cada vez mais veloz "
+            description="Empresa especializada em fornecimento de internet 
+            com preços que cabem no seu bolso. Consulte as ofertas com seu Cep."
+            button="Saiba Mais"
           />
         </Div>
       </Body>

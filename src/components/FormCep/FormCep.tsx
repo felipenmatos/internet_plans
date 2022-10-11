@@ -47,6 +47,15 @@ const Input = styled.input`
   border-radius: 10px;
   border: none;
   outline: none;
+
+  ::placeholder {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #898989;
+  }
 `;
 
 const Button = styled.button`
