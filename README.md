@@ -1,5 +1,7 @@
 # Internet Plans
 
+![project2](https://user-images.githubusercontent.com/82072640/206578402-8b52a2a9-684e-4f91-8c63-b8ea95015652.jpg)
+
 O projeto consiste em uma resolução de desafio técnico onde é necessário em 1 dia desenvolver 2 telas de um sistema que já está no ar, são as telas Home e de Ofertas. Na tela Home é possível informar seu CEP para consultar localidade e planos disponíveis para contratação. Ao consultar você é redirecionado para a tela de Ofertas com algumas possíveis ofertas para sua localidade, fica a sua disponsição do interesse da contratação ou não. Clicando em Contratar você deve informar seu e-mail no modal para que alguma unidade técnica próxima possa fazer o contato. 
 
 ## Como foi desenvolvido o Projeto 
